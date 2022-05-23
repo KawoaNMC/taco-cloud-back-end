@@ -3,7 +3,6 @@ package tacos.web;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.EntityLinks;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,8 +21,6 @@ import tacos.Ingredient;
 @CrossOrigin(origins = "*")
 public class IngredientController {
 	private IngredientRepository ingredientRepo;
-	@Autowired
-	EntityLinks entityLinks;
 	
 	public IngredientController(IngredientRepository ingredientRepo) {
 		this.ingredientRepo = ingredientRepo;
